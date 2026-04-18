@@ -12,7 +12,7 @@ window.PROMPTS = [
     subtitle: "Сырой casting-портрет в духе elite model agency: фарфоровая кожа, вытянутые пропорции, дермaтологическая макро-детализация.",
     category: "editorial",
     tag: "Editorial · Reference Lock",
-    image: "https://твой-url.com/photo.jpg",
+    image: "https://file:///C:/Users/Garant/Desktop/Новая%20папка%20(2)/%7B__model____nano-banana-pro_,_202604180146.png.com/photo.jpg",
     imageAlt: "Референс бледной модели — editorial casting test shot",
     meta: ["4K", "nano-banana-pro", "Magnific 2x"],
     prompt: {
