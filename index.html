@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="INTELLECTUM — коллекция детализированных промптов для генерации изображений" />
+<title>INTELLECTUM · Детализированные промпты</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a href="#" class="logo" aria-label="INTELLECTUM home">
+    <span class="logo-mark">◉</span>
+    <span class="logo-text">INTELLECTUM</span>
+  </a>
+  <nav class="site-nav">
+    <a href="#collection" class="nav-link"><span>Коллекция</span></a>
+    <a href="#about" class="nav-link"><span>О проекте</span></a>
+    <button class="btn-ghost" id="theme-toggle" aria-label="Переключить тему">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+      </svg>
+    </button>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <h1 class="hero-title">
+      <span class="word">Детализированные</span>
+      <span class="word accent">промпты</span>
+      <span class="word">как искусство</span>
+    </h1>
+    <p class="hero-sub">
+      Коллекция точно выверенных промптов. Минимализм снаружи, микро-детали внутри.
+    </p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn-primary">
+        <span>Смотреть коллекцию</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M13 6l6 6-6 6"/>
+        </svg>
+      </a>
+      <a href="#about" class="btn-link">Как устроено</a>
+    </div>
+
+    <div class="hero-meta">
+      <div><span class="num" data-count="1">0</span><span>промптов</span></div>
+      <div><span class="num" data-count="4">0</span><span>K разрешение</span></div>
+      <div><span class="num" data-count="100">0</span><span>% детализация</span></div>
+    </div>
+  </section>
+
+  <section id="collection" class="collection">
+    <div class="section-head">
+      <h2 class="section-title">Коллекция</h2>
+      <div class="filters" role="tablist">
+        <button class="chip is-active" data-filter="all">Все</button>
+        <button class="chip" data-filter="portrait">Портрет</button>
+        <button class="chip" data-filter="product">Продукт</button>
+        <button class="chip" data-filter="editorial">Редакторский</button>
+      </div>
+    </div>
+
+    <div class="card-grid" id="card-grid">
+      <!-- cards injected by JS -->
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-inner">
+      <h2 class="section-title">О проекте</h2>
+      <p>
+        Каждая работа — это связка <em>референс → промпт → результат</em>.
+        Нажмите на карточку, чтобы открыть детализированный промпт. Наведите
+        на изображение — появится лупа: ищите микро-детали в каждом пикселе.
+      </p>
+      <div class="about-grid">
+        <div class="about-card" data-hover="magnifier">
+          <div class="about-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="11" cy="11" r="7"/>
+              <path d="M21 21l-4.3-4.3"/>
+            </svg>
+          </div>
+          <h3>Лупа на референсе</h3>
+          <p>Изучайте изображение в 2× увеличении прямо под курсором.</p>
+        </div>
+        <div class="about-card" data-hover="copy">
+          <div class="about-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="9" y="9" width="11" height="11" rx="2"/>
+              <path d="M5 15V5a2 2 0 0 1 2-2h10"/>
+            </svg>
+          </div>
+          <h3>Копирование в один клик</h3>
+          <p>Полный JSON-промпт копируется в буфер с тактильным откликом.</p>
+        </div>
+        <div class="about-card" data-hover="pulse">
+          <div class="about-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 12h3l3-8 4 16 3-8h5"/>
+            </svg>
+          </div>
+          <h3>Живые кнопки</h3>
+          <p>Микровзаимодействия: пульс, магнит, эхо — каждый элемент живой.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> INTELLECTUM</span>
+  <span class="footer-dot">·</span>
+  <span>Сделано с вниманием к деталям</span>
+</footer>
+
+<!-- Prompt detail modal -->
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="document">
+    <button class="modal-close" data-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+    <div class="modal-media">
+      <div class="magnifier-wrap" id="magnifier-wrap">
+        <img id="modal-image" alt="" draggable="false" />
+        <div class="magnifier-lens" id="magnifier-lens" aria-hidden="true"></div>
+        <div class="zoom-hint">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>
+          </svg>
+          Наведите, чтобы приблизить
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-head">
+        <div class="modal-tag" id="modal-tag"></div>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-sub" id="modal-sub"></p>
+      </div>
+      <div class="modal-toolbar">
+        <button class="btn-primary" id="copy-btn">
+          <span class="label">Скопировать JSON</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="9" y="9" width="11" height="11" rx="2"/>
+            <path d="M5 15V5a2 2 0 0 1 2-2h10"/>
+          </svg>
+        </button>
+        <button class="btn-ghost" id="download-btn" title="Скачать .json">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 4v12M6 12l6 6 6-6M4 20h16"/>
+          </svg>
+          <span>Скачать</span>
+        </button>
+      </div>
+      <pre class="code-block"><code id="modal-code"></code></pre>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
